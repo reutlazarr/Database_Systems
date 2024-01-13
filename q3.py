@@ -9,6 +9,8 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # We will display the locations from covid_deaths.csv only where the num of new deaths were bigger than the num of new cases
+    # We will show location without duplicates using "DISTINCT"
     cursor.execute("""
         SELECT DISTINCT location
         FROM covid_deaths
