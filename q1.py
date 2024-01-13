@@ -9,5 +9,8 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
-    cursor.execute("""SELECT DISTINCT location FROM covid_deaths""")
+    cursor.execute("""
+        SELECT DISTINCT location 
+        FROM covid_deaths
+        """)
     print(', '.join(str(row) for row in cursor.fetchall()))
