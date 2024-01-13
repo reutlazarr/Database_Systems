@@ -9,6 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    #we will display the names of the places without duplicates using "DISTINCT"
     cursor.execute("""
         SELECT DISTINCT location 
         FROM covid_deaths
