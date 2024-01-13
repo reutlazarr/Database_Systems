@@ -9,6 +9,9 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
+    # We will present the dates, locations and new cases where the num of new cases were equal to the num of weekly hospital admissions,
+    # When the weekly hospital admissions were bigger than 0. 
+    # We will display it by descent order using "ORDER By"
     cursor.execute("""
         SELECT date, location, new_cases
         FROM covid_deaths
