@@ -9,7 +9,7 @@ if __name__ == '__main__':
         port='3307',
     )
     cursor = mydb.cursor()
-    # We will return the date and the amount of new cases order by ascending order using "ORDER BY"
+    # We will return the date and the amount of new cases from covid_deaths.csv ordered by ascending order using "ORDER BY"
     # We will return only the cases in South America where there were more than 15000 new cases per day
     cursor.execute("""
         SELECT date, new_cases
